@@ -8,7 +8,9 @@ setup(name='twosampyle',
       author_email='jdwlbr@gmail.com',
       license='GNU3',
       packages=['twosampyle'],
-      # install_requires=[
-      #     'markdown',
-      # ],
+      install_requires=[
+            'pandas',
+            'numpy',
+            'matplotlib'
+      ],
       zip_safe=False)
