@@ -1,4 +1,5 @@
 class PermTest(object):
+    
     def __init__(self, data):
         self.data = data
         self.formatted_data = None
@@ -68,7 +69,7 @@ class PermTest(object):
             return testStatistics
 
     def test(self, response="response", treatment="treatment", test="mean", k=100):
-
+        """"""
         if test == "mean":
             current_stat = self.diff_means(response=response, treatment=treatment)
 
@@ -79,7 +80,7 @@ class PermTest(object):
             return p_value
 
     def plot_dsn(self, response="response", treatment="treatment", test="mean", k=100):
-
+        """"""
         simulated_stats = self.simPermDsn(response=response, treatment=treatment, test=test, k=k)
         tit = "Permutation Test Statistic Distribution for k={} Simulations".format(k)
         plot_hist(simulated_stats, title=tit, xlabel="Test Statistic Value", ylabel="Frequency")
