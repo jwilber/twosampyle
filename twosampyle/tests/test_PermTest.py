@@ -20,3 +20,4 @@ def test_PermTestShouldLoadDataFine():
     data = {"trt1": [1,2,3,4,5,6,7,8,9,10], "trt2": [40,50,60,70,70,60,50,30,40,20]}
     df = pd.DataFrame(data)
     p = PermTest(df)
+    assert p.data == df
