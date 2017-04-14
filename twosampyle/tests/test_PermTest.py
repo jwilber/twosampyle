@@ -3,7 +3,8 @@ import pandas as pd
 import numpy as np 
 import matplotlib.pyplot as plt 
 
-
+# ask Stefan: should I create data in each test or create some here and then use it in test?
+# also ask about naming convention
 def test_works():
 	pass
 
@@ -22,3 +23,17 @@ def test_PermTestShouldLoadDataAsIs():
     df = pd.DataFrame(data)
     p = PermTest(df)
     assert p.data.shape == df.shape
+
+
+def test_formatForDataWithNameAndFormatForDataWithoutNameShouldBeTheSame():
+	pass
+
+def pValueShouldBeVeryCloseToZeroIfDataExtremelyDifferent():
+	pass
+
+def pValueShouldBeOneIfDataExactlyTheSame():
+	pass
+
+def pValueShouldBeBetweenZeroAndOne():
+	pass
+
