@@ -22,7 +22,7 @@ def test_InputNotCorrectShapesShouldRaiseError():
 
 
 def test_simPermDsnShouldReturnListOfSizeK():
-	data = pd.DataFrame({"trt1": [1,2,3,4], "trt2": [2,3,4,5])
+	data = pd.DataFrame({"trt1": [1,2,3,4], "trt2": [2,3,4,5]})
 	p = PermTest(data)
 	p.format_data()
 	sim_data = p.simPermDsn(k=5)
