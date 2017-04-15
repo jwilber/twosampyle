@@ -5,14 +5,19 @@ import matplotlib.pyplot as plt
 
 # ask Stefan: should I create data in each test or create some here and then use it in test?
 # also ask about naming convention
-def test_works():
-	pass
 
 def test_DiffMeansForSameDataShouldBeZero():
-	pass
+	from twosampyle.permtest import PermTest
+	data = pd.DataFrame({"trt1": [1:20], "trt2": [1:20})
+	p = PermTest(data)
+	p.format_data()
+	diffmean = p.diffmean()
+	assert diffmean < 1e-5, "Difference of Means for the same data should be zero"
+
 
 def test_InputNotCorrectShapesShouldRaiseError():
-	pass
+	with pytest.raises(ValueError):
+		data = {"trt1": [1,2], "trt2": [1,2,3]}
 
 def test_simPermDsnShouldReturnListOfSizeK():
 	pass
