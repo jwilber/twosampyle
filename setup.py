@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='twosampyle',
-      version='0.1.5',
+      version='0.1.6',
       description='Python module for two-sample statistical tests',
       url='https://github.com/jwilber/twosampyle',
       author='Jared Wilber',
