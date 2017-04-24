@@ -15,19 +15,19 @@ from twosampyle.permtest import PermTest
 # 	assert diffmean < 1e-5, "Difference of Means for the same data should be zero"
 
 
-# def test_InputNotCorrectShapesShouldRaiseError():
-# 	with pytest.raises(ValueError):
-# 		data = {"trt1": [1,2], "trt2": [1,2,3]}
-# 		p = PermTest(data)
+def test_InputNotCorrectShapesShouldRaiseError():
+	with pytest.raises(ValueError):
+		data = {"trt1": [1,2], "trt2": [1,2,3]}
+		p = PermTest(data)
 	
 
 
-# def test_simPermDsnShouldReturnListOfSizeK(): 
-# 	data = pd.DataFrame({"trt1": [1,2,3,4], "trt2": [2,3,4,5]})
-# 	p = PermTest(data)
-# 	p.format_data()
-# 	sim_data = p.simPermDsn(k=5)
-# 	assert len(sim_data) == 5
+def test_simPermDsnShouldReturnListOfSizeK(): 
+	data = pd.DataFrame({"trt1": [1,2,3,4], "trt2": [2,3,4,5]})
+	p = PermTest(data)
+	p.format_data()
+	sim_data = p.simPermDsn(k=5)
+	assert len(sim_data) == 5
 
 def test_PermTestShouldLoadDataAsIs():
 	data={"trt1":[1,2,3,4,5], "trt2":[40,50,60,70,79]}
