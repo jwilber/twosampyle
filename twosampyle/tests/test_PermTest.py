@@ -43,10 +43,11 @@ def test_formatForDataWithNameAndFormatForDataWithoutNameShouldBeTheSame():
 	assert p1.format_data() == p2.format_data('trt1', 'trt2')
 
 def test_pValueShouldBeVeryCloseToZeroIfDataExtremelyDifferent(): 
-	data = pd.DataFrame({"trt1": [1,2,3], "trt2": [1000,24000,-4000]})
+	data = pd.DataFrame({"trt1": [1,2,3,4,5,6,7,4,4,4,3,2,1,2,1.5,8], 
+		"trt2": [100000,1000,1000,1000,4000,5000,6000,24000,-4000,5000,60000,40000,555555,33333355555555,434343,43434]})
 	p = PermTest(data)
 	p.format_data()
-	assert p.pvalue() < 1e-5
+	assert p.pvalue() < 1e-4
 
 
 def test_pValueShouldBeOneIfDataExactlyTheSame(): 
