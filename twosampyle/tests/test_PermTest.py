@@ -36,11 +36,11 @@ from twosampyle.permtest import PermTest
 # 	assert p.data.shape == df.shape
 
 
-# def test_formatForDataWithNameAndFormatForDataWithoutNameShouldBeTheSame(): 
-# 	data = pd.DataFrame({"trt1": range(5), "trt2": range(5)})
-# 	p1 = PermTest(data)
-# 	p2 = PermTest(data)
-# 	assert p1.format_data() == p2.format_data('trt1', 'trt2')
+def test_formatForDataWithNameAndFormatForDataWithoutNameShouldBeTheSame(): 
+	data = pd.DataFrame({"trt1": range(5), "trt2": range(5)})
+	p1 = PermTest(data)
+	p2 = PermTest(data)
+	assert p1.format_data() == p2.format_data('trt1', 'trt2')
 
 def test_pValueShouldBeVeryCloseToZeroIfDataExtremelyDifferent(): 
 	data = pd.DataFrame({"trt1": [1,2,3], "trt2": [1000,24000,-4000]})
