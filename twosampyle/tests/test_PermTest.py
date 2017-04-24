@@ -42,11 +42,11 @@ from twosampyle.permtest import PermTest
 # 	p2 = PermTest(data)
 # 	assert p1.format_data() == p2.format_data('trt1', 'trt2')
 
-# def test_pValueShouldBeVeryCloseToZeroIfDataExtremelyDifferent(): 
-# 	data = pd.DataFrame({"trt1": [1,2,3], "trt2": [1000,24000,-4000]})
-# 	p = PermTest(data)
-# 	p.format_data()
-# 	assert p.pvalue() < 1e-5
+def test_pValueShouldBeVeryCloseToZeroIfDataExtremelyDifferent(): 
+	data = pd.DataFrame({"trt1": [1,2,3], "trt2": [1000,24000,-4000]})
+	p = PermTest(data)
+	p.format_data()
+	assert p.pvalue() < 1e-5
 
 
 def test_pValueShouldBeOneIfDataExactlyTheSame(): 
