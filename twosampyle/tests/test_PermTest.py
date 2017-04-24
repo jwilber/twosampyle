@@ -29,11 +29,11 @@ from twosampyle.permtest import PermTest
 # 	sim_data = p.simPermDsn(k=5)
 # 	assert len(sim_data) == 5
 
-# def test_PermTestShouldLoadDataAsIs():
-# 	data={"trt1":[1,2,3,4,5], "trt2":[40,50,60,70,79]}
-# 	df = pd.DataFrame(data)
-# 	p = PermTest(df)
-# 	assert p.data.shape == df.shape
+def test_PermTestShouldLoadDataAsIs():
+	data={"trt1":[1,2,3,4,5], "trt2":[40,50,60,70,79]}
+	df = pd.DataFrame(data)
+	p = PermTest(df)
+	assert p.data.shape == df.shape
 
 
 def test_formatForDataWithNameAndFormatForDataWithoutNameShouldBeTheSame(): 

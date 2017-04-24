@@ -7,6 +7,7 @@
 1. **Ease of use**: `twosampyle` has a uniform API and all statistical tests share the same methods and attributes. Think of something along the lines of sci-kit learn's API, but for statistical tests instead of machine learning.
 
 2. **Minimalism** : `twosampyle` only includes functionality that you'll need, and (in its current form) only incudes the following methods:
+
 	- 
 	- 
 	-
