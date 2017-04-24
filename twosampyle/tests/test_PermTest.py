@@ -49,11 +49,11 @@ from twosampyle.permtest import PermTest
 # 	assert p.pvalue() < 1e-5
 
 
-# def test_pValueShouldBeOneIfDataExactlyTheSame(): 
-# 	data = pd.DataFrame({"trt1": [1,2,3], "trt2": [1,2,3]})
-# 	p = PermTest(data)
-# 	p.format_data()
-# 	assert p.pvalue() >= .9999
+def test_pValueShouldBeOneIfDataExactlyTheSame(): 
+	data = pd.DataFrame({"trt1": [1,2,3], "trt2": [1,2,3]})
+	p = PermTest(data)
+	p.format_data()
+	assert p.pvalue() >= .9999
 
 def test_pValueShouldBeBetweenZeroAndOne(): 
 	data = pd.DataFrame({"trt1": [1,2,3], "trt2": [4,5,3]})
