@@ -15,7 +15,7 @@
 	-
 
 
-# Getting Started: Testing with `twosampyle`
+## Getting Started: Testing with `twosampyle`
 
 
 `twosampyle` currently includes the following statistical tests:

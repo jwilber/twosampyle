@@ -7,18 +7,18 @@ from twosampyle.permtest import PermTest
 # ask Stefan: should I create data in each test or create some here and then use it in test?
 # also ask about naming convention
 
-# def test_DiffMeansForSameDataShouldBeZero():
-# 	data = pd.DataFrame({"trt1": range(5), "trt2": range(5)})
-# 	p = PermTest(data)
-# 	p.format_data()
-# 	diffmean = p.diff_means()
-# 	assert diffmean < 1e-5, "Difference of Means for the same data should be zero"
+def test_DiffMeansForSameDataShouldBeZero():
+	data = pd.DataFrame({"trt1": range(5), "trt2": range(5)})
+	p = PermTest(data)
+	p.format_data()
+	diffmean = p.diff_means()
+	assert diffmean < 1e-5, "Difference of Means for the same data should be zero"
 
 
-def test_InputNotCorrectShapesShouldRaiseError():
-	with pytest.raises(ValueError):
-		data = {"trt1": [1,2], "trt2": [1,2,3]}
-		p = PermTest(data)
+# def test_InputNotCorrectShapesShouldRaiseError():
+# 	with pytest.raises(ValueError):
+# 		data = {"trt1": [1,2], "trt2": [1,2,3]}
+# 		p = PermTest(data)
 	
 
 
