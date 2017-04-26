@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt 
 from scipy.stats import t
 
-cclass TTest():
-    
+class TTest():
+        
     def __init__(self, a=None, b=None):
         self.a = a
         self.b = b
