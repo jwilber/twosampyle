@@ -1,9 +1,3 @@
-def chi_squared_statistic(o,e):
-    """"""
-    
-    o = np.array(o)
-    e = np.array(e)
-    return np.sum(1.0*(o - e)**2 / e)
 
 
 class ChiSquaredTest():
@@ -11,6 +5,14 @@ class ChiSquaredTest():
     def __init__(self, observed=None, expected=None):
         self.observed = observed
         self.expected = expected
+        
+        
+    @staticmethod    
+    def chi_squared_statistic(o,e):
+        """""" 
+        o = np.array(o)
+        e = np.array(e) + 1e-6 # add so we don't get 0-division error
+        return np.sum(1.0*(o - e)**2 / e)
         
         
     def plot_dsn(self, k=100):
@@ -21,9 +23,9 @@ class ChiSquaredTest():
     
     def testStat(self, input_observed=None, input_expected=None):
         if input_observed or input_expected:
-            chisq_teststat = chi_squared_statistic(input_observed, input_expected)
+            chisq_teststat = ChiSquaredTest.chi_squared_statistic(input_observed, input_expected)
         else:
-            chisq_teststat = chi_squared_statistic(self.observed, self.expected)
+            chisq_teststat = ChiSquaredTest.chi_squared_statistic(self.observed, self.expected)
         return chisq_teststat
     
     def simPermDsn(self, input_observed=None, input_expected=None, k=100):
