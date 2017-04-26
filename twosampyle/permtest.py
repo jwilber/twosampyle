@@ -103,6 +103,7 @@ class PermTest(object):
     def plot_dsn(self, response="response", treatment="treatment", test="mean", k=100):
         """Plots distribution of test statistics"""
         simulated_stats = self.simPermDsn(response=response, treatment=treatment, test=test, k=k)
+        test_statistic = self.diff_means(response, treatment)
         tit = "Permutated Test Statistic Distribution for k={} Simulations".format(k)
-        plot_hist(simulated_stats, title=tit, xlabel="Test Statistic Value", ylabel="Frequency")
+        plot_hist(simulated_stats, title=tit, xlabel="Test Statistic Value", ylabel="Frequency", test_stat=test_statistic)
 

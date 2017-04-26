@@ -10,7 +10,7 @@ ticks_font = fm.FontProperties(family='serif', style='normal', size=10, weight='
 annotation_font = fm.FontProperties(family='serif', style='normal', size=10, weight='normal', stretch='normal')
 axis_bgcolor = 'white'
 # make a re-usable function to draw nice bar charts
-def plot_hist(data, title='', xlabel='Test Statistic Values', ylabel='Frequency', color='red'):
+def plot_hist(data, title='', xlabel='Test Statistic Values', ylabel='Frequency', color='red', test_stat=None):
     
     if type(data) == list:
         data = pd.Series(data)
@@ -28,5 +28,7 @@ def plot_hist(data, title='', xlabel='Test Statistic Values', ylabel='Frequency'
     ax.set_title(title, fontproperties=title_font)
     ax.set_xlabel(xlabel, fontproperties=label_font)
     ax.set_ylabel(ylabel, fontproperties=label_font)
+    if test_stat:
+        plt.axvline(test_stat, lw=7)
 
     plt.show()
