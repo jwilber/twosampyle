@@ -11,6 +11,7 @@ setup(name='twosampyle',
       install_requires=[
             'pandas',
             'numpy',
-            'matplotlib'
+            'matplotlib',
+            'scipy'
       ],
       zip_safe=False)
