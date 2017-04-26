@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import t
 
 class TTest():
+    """Class for parametric t-test"""
         
     def __init__(self, a=None, b=None):
         self.a = a
