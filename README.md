@@ -21,14 +21,17 @@
 `twosampyle` currently includes the following statistical tests:
 
 - **Nonparametric**
+
 		- `PermTest()`: Implementation of the classic permutation test.
 		- `PermutedChiSquare()`: Nonparametric implementation of the chisquare test for independence.
 
 - **Parametric**
+
 		- `ttest`:
 		- `Chisquare`:
 
 - **Bayesian**
+
 		- `BayesianAB`: Bayesian A/B Test
 
 
