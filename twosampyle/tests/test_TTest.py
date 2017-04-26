@@ -10,8 +10,8 @@ def test_pValueShouldBeBetweenZeroAndOne():
 	assert 0 <= tt.pvalue() <= 1
 
 def test_pValueShouldBeVeryCloseToZeroIfDataExtremelyDifferent(): 
-	tt = TTest([1]*19,
-		[100000,1000,1000,1000,4000,5000,6000,24000,-4000,5000,60000,40000,555555,33333355555555,434343,43434,1e5,2e5,4e5])
+	tt = TTest([1,2,3,4,5],
+		[1e4,2e4,3e4,4e4,5e4])
 	assert tt.pvalue(sided='two') < .1
 
 
