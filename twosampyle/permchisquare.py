@@ -1,4 +1,7 @@
-
+import pandas as pd 
+import numpy as np
+import matplotlib.pyplot as plt 
+from twosampyle.plot_utils import plot_hist
 
 class ChiSquaredTest():
     
@@ -43,8 +46,8 @@ class ChiSquaredTest():
             ex = 1.0*n/2
             values[values<.5]=0
             values[values>=.5]=1
-            diff1 = chi_squared_statistic(sum(values==0),ex)
-            diff2 = chi_squared_statistic(sum(values==1),ex)
+            diff1 = ChiSquaredTest.chi_squared_statistic(sum(values==0),ex)
+            diff2 = ChiSquaredTest.chi_squared_statistic(sum(values==1),ex)
             chisqrd_vals.append(diff1+diff2)
         return chisqrd_vals
     
