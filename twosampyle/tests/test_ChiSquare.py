@@ -13,11 +13,11 @@ from twosampyle.permchisquare import ChiSquaredTest
 # 	assert 0 <= chisq.pvalue() <= 1
 
 
-# def test_pValueShouldBeOneIfDataExactlyTheSame(): 
-# 	observed = range(100000)
-# 	expected = range(100000)
-# 	chi = ChiSquaredTest(observed, expected)
-# 	assert chi.pvalue() >= .9
+def test_pValueShouldBeOneIfDataExactlyTheSame(): 
+	observed = range(100000)
+	expected = range(100000)
+	chi = ChiSquaredTest(observed, expected)
+	assert chi.pvalue() >= .9
 
 
 def test_pValueShouldBeVeryCloseToZeroIfDataExtremelyDifferent(): 
